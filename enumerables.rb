@@ -39,7 +39,7 @@ class Array
   end
 
   def my_flatten(array = self)
-    return array[0] if array.length == 1
+    return [array] if !array.is_a? Array
     new_arr = []
     array.each do |ele|
       if ele.is_a?(Array)
@@ -74,7 +74,6 @@ class Array
     new_arr
   end
 
-  def 
 end
 
 # return_value = [1, 2, 3].my_each do |num|
@@ -97,7 +96,8 @@ end
 # p a.my_all? { |num| num > 1 } # => false
 # p a.my_all? { |num| num < 4 } # => true
 
-# p [1, 2, 3, [4, [5, 6]], [[[7]], 8]].my_flatten # => [1, 2, 3, 4, 5, 6, 7, 8]
+p [1, 2, 3, [4, [5, 6]], [[[7]], 8]].my_flatten # => [1, 2, 3, 4, 5, 6, 7, 8]
+p [7].my_flatten
 
 # a = [ 4, 5, 6 ]
 # b = [ 7, 8, 9 ]
@@ -109,8 +109,8 @@ end
 # d = [13, 14, 15]
 # p [1, 2].my_zip(a, b, c, d)    # => [[1, 4, 7, 10, 13], [2, 5, 8, 11, 14]]
 
-a = [ "a", "b", "c", "d" ]
-p a.my_rotate         #=> ["b", "c", "d", "a"]
-p a.my_rotate(2)      #=> ["c", "d", "a", "b"]
-p a.my_rotate(-3)     #=> ["b", "c", "d", "a"]
-p a.my_rotate(15)     #=> ["d", "a", "b", "c"]
+# a = [ "a", "b", "c", "d" ]
+# p a.my_rotate         #=> ["b", "c", "d", "a"]
+# p a.my_rotate(2)      #=> ["c", "d", "a", "b"]
+# p a.my_rotate(-3)     #=> ["b", "c", "d", "a"]
+# p a.my_rotate(15)     #=> ["d", "a", "b", "c"]
