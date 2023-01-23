@@ -74,6 +74,22 @@ class Array
     new_arr
   end
 
+  def my_join(separator = "")
+    new_str = ""
+    self.each do |char|
+      new_str += (char + separator)
+    end
+    new_str
+  end
+
+  def my_reverse
+    new_arr = []
+    (0..self.length - 1).each do |i|
+      new_arr << self[ -1 - i]
+    end
+    new_arr
+  end
+
 end
 
 # return_value = [1, 2, 3].my_each do |num|
