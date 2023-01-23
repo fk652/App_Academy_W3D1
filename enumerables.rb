@@ -74,7 +74,22 @@ class Array
     new_arr
   end
 
-  def 
+  def my_join(separator = "")
+    new_str = ""
+    self.each do |char|
+      new_str += (char + separator)
+    end
+    new_str
+  end
+
+  def my_reverse
+    new_arr = []
+    (0..self.length - 1).each do |i|
+      new_arr << self[ -1 - i]
+    end
+    new_arr
+  end
+
 end
 
 # return_value = [1, 2, 3].my_each do |num|
@@ -109,8 +124,15 @@ end
 # d = [13, 14, 15]
 # p [1, 2].my_zip(a, b, c, d)    # => [[1, 4, 7, 10, 13], [2, 5, 8, 11, 14]]
 
-a = [ "a", "b", "c", "d" ]
-p a.my_rotate         #=> ["b", "c", "d", "a"]
-p a.my_rotate(2)      #=> ["c", "d", "a", "b"]
-p a.my_rotate(-3)     #=> ["b", "c", "d", "a"]
-p a.my_rotate(15)     #=> ["d", "a", "b", "c"]
+# a = [ "a", "b", "c", "d" ]
+# p a.my_rotate         #=> ["b", "c", "d", "a"]
+# p a.my_rotate(2)      #=> ["c", "d", "a", "b"]
+# p a.my_rotate(-3)     #=> ["b", "c", "d", "a"]
+# p a.my_rotate(15)     #=> ["d", "a", "b", "c"]
+
+# a = [ "a", "b", "c", "d" ]
+# p a.my_join         # => "abcd"
+# p a.my_join("$")    # => "a$b$c$d"
+
+# p [ "a", "b", "c" ].my_reverse   #=> ["c", "b", "a"]
+# p [ 1 ].my_reverse               #=> [1]
