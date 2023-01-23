@@ -113,4 +113,15 @@ p [7].my_flatten
 # p a.my_rotate         #=> ["b", "c", "d", "a"]
 # p a.my_rotate(2)      #=> ["c", "d", "a", "b"]
 # p a.my_rotate(-3)     #=> ["b", "c", "d", "a"]
+<<<<<<< HEAD
 # p a.my_rotate(15)     #=> ["d", "a", "b", "c"]
+=======
+# p a.my_rotate(15)     #=> ["d", "a", "b", "c"]
+
+# a = [ "a", "b", "c", "d" ]
+# p a.my_join         # => "abcd"
+# p a.my_join("$")    # => "a$b$c$d"
+
+# p [ "a", "b", "c" ].my_reverse   #=> ["c", "b", "a"]
+# p [ 1 ].my_reverse               #=> [1]
+>>>>>>> 76b9f8330a6deb2efe09071efa54819860cd6240
